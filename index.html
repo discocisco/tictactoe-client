@@ -12,21 +12,15 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <nav class="container-fluid" id="nav-bar">
-        <ul class="nav nav-fill nav-pills">
-          <li class="nav-item">
-            <a class="nav-link active" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Sign-Up</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Sign-In</a>
-          </li>
-        </ul>
+      <!-- Navigation bar-->
+      <nav class="nav nav-pills flex-column flex-sm-row">
+        <a class="flex-sm-fill text-sm-center nav-link active" href="#">Home</a>
+        <a class="flex-sm-fill text-sm-center nav-link" href="#">About</a>
+        <a class="flex-sm-fill text-sm-center nav-link" data-toggle="modal" data-target="#signUpModalCenter" href="#">Sign Up</a>
+        <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+          Sign Up
+        </button> -->
+        <a class="flex-sm-fill text-sm-center nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Sign In</a>
       </nav>
       <section class="container" id="main-content">
         <div class="col-12 col-xl-12">
@@ -53,5 +47,34 @@
           </div>
         </div>
       </section>
+
+      <!-- Modal -->
+      <div class="modal fade" id="signUpModalCenter" tabindex="-1" role="dialog" aria-labelledby="signUpModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="signUpModalCenterTitle">Create a User!</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <form id="sign-up">
+              <div class="modal-body">
+                <input type="text" name="credentials[email]" placeholder="your.email@example.com">
+                <small id="emailHelp" class="form-text text-muted">Enter your email here.</small>
+                <input type="text" name="credentials[password]" placeholder="********">
+                <small id="passwordHelp" class="form-text text-muted">Enter a password.</small>
+                <input type="text" name="credentials[password_confirmation]" placeholder="********">
+                <small id="passwordConfirmHelp" class="form-text text-muted">Confirm your password.</small>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Create User</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
     </body>
 </html>
