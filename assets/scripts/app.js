@@ -10,7 +10,7 @@ const userEvents = require('./users/events.js')
 $(() => {
   // your JS code goes here
   $('#sign-up').on('submit', userEvents.onSignUp)
-  // $('#sign-in').on('submit', userEvents.onSignIn)
+  $('#sign-in').on('submit', userEvents.onSignIn)
   // $('#change-password').on('submit', userEvents.onChangePassword)
   // $('#sign-out').on('click', userEvents.onSignOut)
   // $('#index-games').on('click', gameEvents.onIndexGames)

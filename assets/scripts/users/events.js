@@ -14,6 +14,17 @@ const onSignUp = (event) => {
   $('#sign-up').trigger('reset')
 }
 
+const onSignIn = (event) => {
+  event.preventDefault()
+  const formData = getFormFields(event.target)
+  api.signIn(formData)
+    .then(ui.onSignInSuccess)
+    .catch(ui.onError)
+
+  $('#sign-in').trigger('reset')
+}
+
 module.exports = {
-  onSignUp
+  onSignUp,
+  onSignIn
 }

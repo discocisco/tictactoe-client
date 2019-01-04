@@ -12,16 +12,18 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <!-- Navigation bar-->
+      <!--Navigation bar-->
       <nav class="nav nav-pills flex-column flex-sm-row">
         <a class="flex-sm-fill text-sm-center nav-link active" href="#">Home</a>
         <a class="flex-sm-fill text-sm-center nav-link" href="#">About</a>
         <a class="flex-sm-fill text-sm-center nav-link" data-toggle="modal" data-target="#signUpModalCenter" href="#">Sign Up</a>
-        <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-          Sign Up
-        </button> -->
-        <a class="flex-sm-fill text-sm-center nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Sign In</a>
+        <a class="flex-sm-fill text-sm-center nav-link" data-toggle="modal" data-target="#signInModalCenter" href="#">Sign In</a>
       </nav>
+      <!--Content location-->
+      <section class="container" id="user-log">
+        <div id="user-message"></div>
+      </section>
+
       <section class="container" id="main-content">
         <div class="col-12 col-xl-12">
           <h1>Tic-Tac-Toe</h1>
@@ -48,7 +50,7 @@
         </div>
       </section>
 
-      <!-- Modal -->
+      <!--Sign Up Modal-->
       <div class="modal fade" id="signUpModalCenter" tabindex="-1" role="dialog" aria-labelledby="signUpModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
@@ -60,6 +62,7 @@
             </div>
             <form id="sign-up">
               <div class="modal-body">
+                <h6>Welcome! Please sign up to play our game</h6>
                 <input type="text" name="credentials[email]" placeholder="your.email@example.com">
                 <small id="emailHelp" class="form-text text-muted">Enter your email here.</small>
                 <input type="text" name="credentials[password]" placeholder="********">
@@ -76,5 +79,31 @@
         </div>
       </div>
 
+      <!--Sign In Modal-->
+      <div class="modal fade" id="signInModalCenter" tabindex="-1" role="dialog" aria-labelledby="signInModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="signInModalCenterTitle">Existing User Sign In</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <form id="sign-in">
+              <div class="modal-body">
+                <h6>Welcome back! Please sign in to play</h6>
+                <input type="text" name="credentials[email]" placeholder="your.email@example.com">
+                <small id="emailHelp" class="form-text text-muted">Enter your email here.</small>
+                <input type="text" name="credentials[password]" placeholder="********">
+                <small id="passwordHelp" class="form-text text-muted">Enter a password.</small>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Sign In</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </body>
 </html>
