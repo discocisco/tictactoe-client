@@ -1,4 +1,10 @@
+## Tic Tac Toe game!
 
+This is where we can start to place things that talk about the game or other
+fun things! Maybe I'll describe how to use the website itself and then I'll
+get into things like how-to-play tic-tac-toe or other fun things.
+
+Woo!
   <!-- [![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
 
   # browser-template
