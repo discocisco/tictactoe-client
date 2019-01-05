@@ -17,6 +17,7 @@
         <a id="home-link" class="flex-sm-fill text-sm-center nav-link active" href="#">Home</a>
         <a id="signup-link" class="flex-sm-fill text-sm-center nav-link" data-toggle="modal" data-target="#signUpModalCenter" href="#">Sign Up</a>
         <a id="signin-link" class="flex-sm-fill text-sm-center nav-link" data-toggle="modal" data-target="#signInModalCenter" href="#">Sign In</a>
+        <a id="changepw-link" class="flex-sm-fill text-sm-center nav-link" data-toggle="modal" data-target="#changePWModalCenter" href="#">Change Password</a>
         <a id="sign-out"class="flex-sm-fill text-sm-center nav-link" href="#">Sign Out</a>
       </nav>
       <!--Content location-->
@@ -100,6 +101,33 @@
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 <button type="submit" class="btn btn-primary">Sign In</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!--Change Password Modal-->
+      <div class="modal fade" id="changePWModalCenter" tabindex="-1" role="dialog" aria-labelledby="changePWModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="changePWModalCenterTitle">Change Password</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <form id="change-pw">
+              <div class="modal-body">
+                <h6>Enter your old password and your preferred new password below.</h6>
+                <input type="text" name="passwords[old]" placeholder="********">
+                <small id="oldPWHelp" class="form-text text-muted">Enter your old password here.</small>
+                <input type="text" name="passwords[new]" placeholder="********">
+                <small id="newPWHelp" class="form-text text-muted">Enter a new password.</small>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Save</button>
               </div>
             </form>
           </div>

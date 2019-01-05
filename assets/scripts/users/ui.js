@@ -14,12 +14,24 @@ const onSignInSuccess = (responseData) => {
   console.log('Store is:', store)
 }
 
+const onChangePasswordSuccess = () => {
+  $('#user-message').html(`Successfully changed password for: ${store.user.email}`)
+  console.log('Store is:', store)
+}
+
 const onSignOutSuccess = () => {
   $('#user-message').html(`Successfully signed out of: ${store.user.email}`)
+}
+
+const onError = () => {
+  $('#user-message').css('color', 'red')
+  $('#user-message').html('Encountered error, please try again :(')
 }
 
 module.exports = {
   onSignUpSuccess,
   onSignInSuccess,
-  onSignOutSuccess
+  onChangePasswordSuccess,
+  onSignOutSuccess,
+  onError
 }

@@ -12,6 +12,7 @@ const onSignUp = (event) => {
     .catch(ui.onError)
 
   $('#sign-up').trigger('reset')
+  $('#signUpModalCenter').modal('hide')
 }
 
 const onSignIn = (event) => {
@@ -25,6 +26,17 @@ const onSignIn = (event) => {
   $('#signInModalCenter').modal('hide')
 }
 
+const onChangePassword = (event) => {
+  event.preventDefault()
+  const formData = getFormFields(event.target)
+  api.changePassword(formData)
+    .then(ui.onChangePasswordSuccess)
+    .catch(ui.onError)
+
+  $('#change-pw').trigger('reset')
+  $('#changePWModalCenter').modal('hide')
+}
+
 const onSignOut = (event) => {
   event.preventDefault()
   const formData = getFormFields(event.target)
@@ -36,5 +48,6 @@ const onSignOut = (event) => {
 module.exports = {
   onSignUp,
   onSignIn,
+  onChangePassword,
   onSignOut
 }
