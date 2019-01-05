@@ -14,7 +14,12 @@ const onSignInSuccess = (responseData) => {
   console.log('Store is:', store)
 }
 
+const onSignOutSuccess = () => {
+  $('#user-message').html(`Successfully signed out of: ${store.user.email}`)
+}
+
 module.exports = {
   onSignUpSuccess,
-  onSignInSuccess
+  onSignInSuccess,
+  onSignOutSuccess
 }

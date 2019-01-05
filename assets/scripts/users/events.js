@@ -22,9 +22,19 @@ const onSignIn = (event) => {
     .catch(ui.onError)
 
   $('#sign-in').trigger('reset')
+  $('#signInModalCenter').modal('hide')
+}
+
+const onSignOut = (event) => {
+  event.preventDefault()
+  const formData = getFormFields(event.target)
+  api.signOut(formData)
+    .then(ui.onSignOutSuccess)
+    .catch(ui.onError)
 }
 
 module.exports = {
   onSignUp,
-  onSignIn
+  onSignIn,
+  onSignOut
 }
