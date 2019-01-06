@@ -23,7 +23,18 @@ const indexGames = (event) => {
   })
 }
 
+const showGame = (event) => {
+  return $.ajax({
+    url: config.apiUrl + '/games/' + event.game.id,
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   createGame,
-  indexGames
+  indexGames,
+  showGame
 }

@@ -15,6 +15,7 @@ const onCreateGame = (event) => {
 
 const onIndexGames = (event) => {
   event.preventDefault()
+  console.log('event.target is', event.target)
   api.indexGames()
     .then(ui.onIndexGamesSuccess)
     .catch(ui.onGameError)
@@ -22,7 +23,16 @@ const onIndexGames = (event) => {
   $('#gameStartModalCenter').modal('hide')
 }
 
+const onShowGame = (event) => {
+  event.preventDefault()
+  console.log('event.target is', event.target)
+  api.showGame()
+    .then(ui.onShowGameSuccess)
+    .catch(ui.onGameError)
+}
+
 module.exports = {
   onCreateGame,
-  onIndexGames
+  onIndexGames,
+  onShowGame
 }
