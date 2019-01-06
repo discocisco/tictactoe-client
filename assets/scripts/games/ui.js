@@ -30,7 +30,7 @@ const onIndexGamesSuccess = (responseData) => {
   store.games = responseData.games
   store.games.forEach(game => {
     const gameHTML = (`
-      <p>Game ID: <button type="button" id="game-${game.id}">${game.id}</button>3</h4>
+      <p>Game ID: <button type="button" id="game-${game.id}">${game.id}</button></h4>
       <p>Finished?: ${game.over}</p>
     `)
     $('#game-board').append(gameHTML)
