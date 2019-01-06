@@ -6,22 +6,23 @@ const onCreateGameSuccess = (responseData) => {
   console.log('Gamedata is', responseData)
   store.game = responseData.game
   $('#user-message').html('Successfully created a new game!')
-  $('#game-board').html(`<div class="row">
-    <div id="box1" class="col-4 col-md-4 box">Box 1</div>
-    <div id="box2" class="col-4 col-md-4 box">Box 2</div>
-    <div id="box3" class="col-4 col-md-4 box">Box 3</div>
+  $('#game-board').html(`
+  <div class="row">
+    <button id="box-1" type="button" class="btn btn-primary col-4 col-md-4 box" aria-disabled="false"></button>
+    <button id="box-2" type="button" class="btn btn-primary col-4 col-md-4 box" aria-disabled="false"></button>
+    <button id="box-3" type="button" class="btn btn-primary col-4 col-md-4 box" aria-disabled="false"></button>
   </div>
 
   <div class="row">
-    <div id="box4" class="col-4 col-md-4 box">Box 4</div>
-    <div id="box5" class="col-4 col-md-4 box">Box 5</div>
-    <div id="box6" class="col-4 col-md-4 box">Box 6</div>
+    <button id="box-4" type="button" class="btn btn-primary col-4 col-md-4 box" aria-disabled="false"></button>
+    <button id="box-5" type="button" class="btn btn-primary col-4 col-md-4 box" aria-disabled="false"></button>
+    <button id="box-6" type="button" class="btn btn-primary col-4 col-md-4 box" aria-disabled="false"></button>
   </div>
 
   <div class="row">
-    <div id="box7" class="col-4 col-md-4 box">Box 7</div>
-    <div id="box8" class="col-4 col-md-4 box">Box 8</div>
-    <div id="box9" class="col-4 col-md-4 box">Box 9</div>
+    <button id="box-7" type="button" class="btn btn-primary col-4 col-md-4 box" aria-disabled="false"></button>
+    <button id="box-8" type="button" class="btn btn-primary col-4 col-md-4 box" aria-disabled="false"></button>
+    <button id="box-9" type="button" class="btn btn-primary col-4 col-md-4 box" aria-disabled="false"></button>
   </div>`)
 }
 
