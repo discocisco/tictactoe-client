@@ -26,11 +26,12 @@
       </section>
 
       <section class="container" id="main-content">
+        <!--Gameboard-->
         <div class="col-12 col-xl-12">
           <h1>Tic-Tac-Toe</h1>
-          <button type="button" class="btn btn-primary btn-lg">Play</button>
+          <button type="button" id="gameStart" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#gameStartModalCenter">Play</button>
         </div>
-        <div id="game-board">
+        <!-- <div id="game-board">
           <div class="row">
             <div class="col-4 col-md-4 box">Box 1</div>
             <div class="col-4 col-md-4 box">Box 2</div>
@@ -48,7 +49,7 @@
             <div class="col-4 col-md-4 box">Box 8</div>
             <div class="col-4 col-md-4 box">Box 9</div>
           </div>
-        </div>
+        </div> -->
       </section>
 
       <!--Sign Up Modal-->
@@ -128,6 +129,29 @@
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 <button type="submit" class="btn btn-primary">Save</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!--Game Start Modal-->
+      <div class="modal fade" id="gameStartModalCenter" tabindex="-1" role="dialog" aria-labelledby="gameStartModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="gameStartModalCenterTitle">Let's play!</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <form>
+              <div class="modal-body">
+                <h6>Create a new game or select an old game to play!</h6>
+                <button id="create-game" type="button" class="btn btn-primary">New Game</button>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
               </div>
             </form>
           </div>
