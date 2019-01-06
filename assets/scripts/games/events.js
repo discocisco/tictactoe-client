@@ -13,6 +13,16 @@ const onCreateGame = (event) => {
   $('#gameStartModalCenter').modal('hide')
 }
 
+const onIndexGames = (event) => {
+  event.preventDefault()
+  api.indexGames()
+    .then(ui.onIndexGamesSuccess)
+    .catch(ui.onGameError)
+
+  $('#gameStartModalCenter').modal('hide')
+}
+
 module.exports = {
-  onCreateGame
+  onCreateGame,
+  onIndexGames
 }
