@@ -2,9 +2,9 @@
 // const getFormFields = require('../../../lib/get-form-fields.js')
 const api = require('./api.js')
 const ui = require('./ui.js')
-// const store = require('./store.js')
+// const store = require('../store.js')
 
-const onCreateGame = (event) => {
+const onCreateGame = event => {
   event.preventDefault()
   api.createGame()
     .then(ui.onCreateGameSuccess)
@@ -13,7 +13,7 @@ const onCreateGame = (event) => {
   $('#gameStartModalCenter').modal('hide')
 }
 
-const onIndexGames = (event) => {
+const onIndexGames = event => {
   event.preventDefault()
   console.log('event.target is', event.target)
   api.indexGames()
@@ -23,10 +23,11 @@ const onIndexGames = (event) => {
   $('#gameStartModalCenter').modal('hide')
 }
 
-const onShowGame = (event) => {
+const onShowGame = event => {
   event.preventDefault()
   console.log('event.target is', event.target)
-  api.showGame()
+  const gameID = event.target.textContent
+  api.showGame(gameID)
     .then(ui.onShowGameSuccess)
     .catch(ui.onGameError)
 }

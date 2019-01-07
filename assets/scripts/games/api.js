@@ -3,7 +3,7 @@
 const config = require('../config.js')
 const store = require('../store.js')
 
-const createGame = (event) => {
+const createGame = () => {
   return $.ajax({
     url: config.apiUrl + '/games',
     method: 'POST',
@@ -13,7 +13,7 @@ const createGame = (event) => {
   })
 }
 
-const indexGames = (event) => {
+const indexGames = () => {
   return $.ajax({
     url: config.apiUrl + '/games',
     method: 'GET',
@@ -23,9 +23,9 @@ const indexGames = (event) => {
   })
 }
 
-const showGame = (event) => {
+const showGame = (id) => {
   return $.ajax({
-    url: config.apiUrl + '/games/' + event.game.id,
+    url: config.apiUrl + '/games/' + id,
     method: 'GET',
     headers: {
       Authorization: 'Token token=' + store.user.token
