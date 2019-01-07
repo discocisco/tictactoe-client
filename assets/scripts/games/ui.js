@@ -4,8 +4,8 @@ const store = require('../store.js')
 const gameLogic = require('./logic.js')
 
 const onCreateGameSuccess = (responseData) => {
-
   store.game = responseData.game
+  $('#game-board .row .btn').html('')
   $('#user-message').html(`Successfully created a new game! Game ID is ${store.game.id}`)
   $('#game-board .row .btn').removeAttr('disabled')
 }

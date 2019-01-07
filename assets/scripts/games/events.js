@@ -36,8 +36,7 @@ const onShowGame = event => {
 const onUpdateGame = event => {
   event.preventDefault()
   console.log('event.target is', event.target)
-  const cellID = event.target.textContent
-  // gameLogic.checkWinner()
+  const cellID = event.target.id[4]
   api.updateGame(cellID)
     .then(ui.onUpdateGameSuccess)
     .catch(ui.onGameError)
