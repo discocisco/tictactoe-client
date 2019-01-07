@@ -2,6 +2,7 @@
 // const getFormFields = require('../../../lib/get-form-fields.js')
 const api = require('./api.js')
 const ui = require('./ui.js')
+// const gameLogic = require('./logic.js')
 // const store = require('../store.js')
 
 const onCreateGame = event => {
@@ -36,6 +37,7 @@ const onUpdateGame = event => {
   event.preventDefault()
   console.log('event.target is', event.target)
   const cellID = event.target.textContent
+  // gameLogic.checkWinner()
   api.updateGame(cellID)
     .then(ui.onUpdateGameSuccess)
     .catch(ui.onGameError)

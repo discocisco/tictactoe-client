@@ -1,8 +1,10 @@
 'use strict'
 
 const store = require('../store.js')
+const gameLogic = require('./logic.js')
 
 const onCreateGameSuccess = (responseData) => {
+
   store.game = responseData.game
   $('#user-message').html(`Successfully created a new game! Game ID is ${store.game.id}`)
   $('#game-board .row .btn').removeAttr('disabled')
@@ -36,6 +38,7 @@ const onUpdateGameSuccess = (responseData) => {
       $('#box-' + i).html(store.game.cells[i])
     }
   }
+  gameLogic.checkWinner()
 }
 
 module.exports = {
