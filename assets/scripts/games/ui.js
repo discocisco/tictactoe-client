@@ -26,8 +26,21 @@ const onShowGameSuccess = (responseData) => {
   console.log('store is', store.game.cells)
 }
 
+const onUpdateGameSuccess = (responseData) => {
+  store.game = responseData.game
+  console.log('storegame is', store.game)
+  console.log('cell is', store.game.cells)
+  for (let i = 0; i < store.game.cells.length; i++) {
+    if (store.game.cells[i]) {
+      $('#box-' + i).attr('disabled', true)
+      $('#box-' + i).html(store.game.cells[i])
+    }
+  }
+}
+
 module.exports = {
   onCreateGameSuccess,
   onIndexGamesSuccess,
-  onShowGameSuccess
+  onShowGameSuccess,
+  onUpdateGameSuccess
 }

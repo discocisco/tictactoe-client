@@ -32,8 +32,18 @@ const onShowGame = event => {
     .catch(ui.onGameError)
 }
 
+const onUpdateGame = event => {
+  event.preventDefault()
+  console.log('event.target is', event.target)
+  const cellID = event.target.textContent
+  api.updateGame(cellID)
+    .then(ui.onUpdateGameSuccess)
+    .catch(ui.onGameError)
+}
+
 module.exports = {
   onCreateGame,
   onIndexGames,
-  onShowGame
+  onShowGame,
+  onUpdateGame
 }

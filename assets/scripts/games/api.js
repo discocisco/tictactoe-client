@@ -33,8 +33,51 @@ const showGame = (id) => {
   })
 }
 
+const updateGame = (id) => {
+  const activeX = store.game.cells.filter(cell => cell === 'x')
+  console.log('activeX is', activeX)
+  const activeO = store.game.cells.filter(cell => cell === 'o')
+  console.log('activeX is', activeO)
+  if (activeX.length === activeO.length) {
+    return $.ajax({
+      url: config.apiUrl + '/games/' + store.game.id,
+      method: 'PATCH',
+      headers: {
+        Authorization: 'Token token=' + store.user.token
+      },
+      data: {
+        'game': {
+          'cell': {
+            'index': id,
+            'value': 'x'
+          },
+          'over': false
+        }
+      }
+    })
+  } else {
+    return $.ajax({
+      url: config.apiUrl + '/games/' + store.game.id,
+      method: 'PATCH',
+      headers: {
+        Authorization: 'Token token=' + store.user.token
+      },
+      data: {
+        'game': {
+          'cell': {
+            'index': id,
+            'value': 'o'
+          },
+          'over': false
+        }
+      }
+    })
+  }
+}
+
 module.exports = {
   createGame,
   indexGames,
-  showGame
+  showGame,
+  updateGame
 }
