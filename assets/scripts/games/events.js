@@ -24,8 +24,8 @@ const onIndexGames = event => {
 
 const onShowGame = event => {
   event.preventDefault()
-  console.log('event.target is', event.target)
   const gameID = event.target.textContent
+  console.log('gameID', gameID)
   api.showGame(gameID)
     .then(ui.onShowGameSuccess)
     .catch(ui.onGameError)
@@ -33,7 +33,6 @@ const onShowGame = event => {
 
 const onUpdateGame = event => {
   event.preventDefault()
-  console.log('event.target is', event.target)
   const cellID = event.target.id[4]
   api.updateGame(cellID)
     .then(ui.onUpdateGameSuccess)
