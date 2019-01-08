@@ -40,9 +40,15 @@ const onUpdateGame = event => {
     .catch(ui.onGameError)
 }
 
+const onPageReset = event => {
+  event.preventDefault()
+  ui.onPageResetSuccess()
+}
+
 module.exports = {
   onCreateGame,
   onIndexGames,
   onShowGame,
-  onUpdateGame
+  onUpdateGame,
+  onPageReset
 }

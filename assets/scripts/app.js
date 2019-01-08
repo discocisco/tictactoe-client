@@ -13,6 +13,7 @@ $('#game-board').hide()
 
 $(() => {
   // your JS code goes here
+  $('#home-link').on('click', gameEvents.onPageReset)
   $('#sign-up').on('submit', userEvents.onSignUp)
   $('#sign-in').on('submit', userEvents.onSignIn)
   $('#change-pw').on('submit', userEvents.onChangePassword)

@@ -6,6 +6,7 @@ const gameLogic = require('./logic.js')
 const onCreateGameSuccess = (responseData) => {
   $('#player-turn').html('<h3>Player X\'s turn</h3>')
   $('#game-board').show()
+  $('.game-title').hide()
   store.game = responseData.game
   $('#game-board .row .btn').html('')
   $('#user-message').html(`Successfully created a new game! Game ID is ${store.game.id}`)
@@ -43,9 +44,24 @@ const onUpdateGameSuccess = (responseData) => {
   gameLogic.checkWinner()
 }
 
+const onPageResetSuccess = () => {
+  $('#show-game').html('')
+  $('#player-turn').html('')
+  $('#user-message').html('')
+  $('.game-title').show()
+  $('#game-board').hide()
+}
+
+const onGameError = () => {
+  $('#user-message').css('color', 'red')
+  $('#user-message').html('Encountered game error, please try again :(')
+}
+
 module.exports = {
   onCreateGameSuccess,
   onIndexGamesSuccess,
   onShowGameSuccess,
-  onUpdateGameSuccess
+  onUpdateGameSuccess,
+  onGameError,
+  onPageResetSuccess
 }
