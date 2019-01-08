@@ -4,6 +4,7 @@ const config = require('../config.js')
 const store = require('../store.js')
 
 const createGame = () => {
+  $('#player-turn').html('<h3>Player X\'s turn</h3>')
   return $.ajax({
     url: config.apiUrl + '/games',
     method: 'POST',
@@ -37,6 +38,7 @@ const updateGame = (id) => {
   const activeX = store.game.cells.filter(cell => cell === 'x')
   const activeO = store.game.cells.filter(cell => cell === 'o')
   if (activeX.length === activeO.length) {
+    $('#player-turn').html('<h3>Player O\'s turn</h3>')
     return $.ajax({
       url: config.apiUrl + '/games/' + store.game.id,
       method: 'PATCH',
@@ -54,6 +56,7 @@ const updateGame = (id) => {
       }
     })
   } else {
+    $('#player-turn').html('<h3>Player X\'s turn</h3>')
     return $.ajax({
       url: config.apiUrl + '/games/' + store.game.id,
       method: 'PATCH',
