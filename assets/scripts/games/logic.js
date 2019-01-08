@@ -13,7 +13,7 @@ const checkWinner = () => {
       (store.game.cells[3] === 'x' && store.game.cells[4] === 'x' && store.game.cells[5] === 'x') ||
       (store.game.cells[6] === 'x' && store.game.cells[7] === 'x' && store.game.cells[8] === 'x')) {
     console.log('player X wins')
-    $('#player-turn').append('<h3>Player X Wins!</h3>')
+    $('#player-turn').html('<h3>Player X Wins!</h3>')
     $('#game-board .row .btn').attr('disabled', true)
     store.game.over = true
     api.gameOver(store.game.id)
@@ -27,14 +27,14 @@ const checkWinner = () => {
       (store.game.cells[3] === 'o' && store.game.cells[4] === 'o' && store.game.cells[5] === 'o') ||
       (store.game.cells[6] === 'o' && store.game.cells[7] === 'o' && store.game.cells[8] === 'o')) {
     console.log('player O wins')
-    $('#player-turn').append('<h3>Player O Wins!</h3>')
+    $('#player-turn').html('<h3>Player O Wins!</h3>')
     $('#game-board .row .btn').attr('disabled', true)
     store.game.over = true
     api.gameOver(store.game.id)
     return true
   } else if (!(store.game.cells.includes(''))) {
     console.log('game is a tie')
-    $('#player-turn').append('<h3>Game is a Tie!</h3>')
+    $('#player-turn').hmtl('<h3>Game is a Tie!</h3>')
     store.game.over = true
     api.gameOver(store.game.id)
     return true

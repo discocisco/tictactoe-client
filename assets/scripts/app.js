@@ -20,6 +20,6 @@ $(() => {
   $('#sign-out').on('click', userEvents.onSignOut)
   $('#index-games').on('click', gameEvents.onIndexGames)
   $('#create-game').on('click', gameEvents.onCreateGame)
-  $('#show-game .games-list .get-game').on('click', gameEvents.onShowGame)
+  $('#show-game').on('click', gameEvents.onShowGame)
   $('#game-board').on('click', gameEvents.onUpdateGame)
 })

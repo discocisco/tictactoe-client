@@ -6,7 +6,6 @@ const gameLogic = require('./logic.js')
 const onCreateGameSuccess = (responseData) => {
   $('#player-turn').html('<h3>Player X\'s turn</h3>')
   $('#game-board').show()
-  $('.game-title').hide()
   store.game = responseData.game
   $('#game-board .row .btn').html('')
   $('#user-message').html(`Successfully created a new game! Game ID is ${store.game.id}`)
@@ -30,7 +29,6 @@ const onIndexGamesSuccess = (responseData) => {
 
 const onShowGameSuccess = (responseData) => {
   store.game = responseData.game
-  $('.game-title').hide()
   $('#show-game').html('')
   $('#user-message').html(`Successfully loaded previous game! Game ID is ${store.game.id}`)
   $('#game-board').show()
@@ -59,7 +57,6 @@ const onPageResetSuccess = () => {
   $('#show-game').html('')
   $('#player-turn').html('')
   $('#user-message').html('')
-  $('.game-title').show()
   $('#game-board').hide()
 }
 

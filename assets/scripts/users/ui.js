@@ -24,6 +24,7 @@ const onSignOutSuccess = () => {
   $('#changepw-link').hide()
   $('#game-board').hide()
   $('#player-turn').hide()
+  $('.game-name').show()
   $('#signup-link').show()
   $('#signin-link').show()
   $('#user-message').html(`Successfully signed out of: ${store.user.email}`)
