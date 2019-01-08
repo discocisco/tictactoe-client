@@ -1,3 +1,7 @@
+.nav {
+  border-bottom: 1px solid $black;
+}
+
 .box {
   align-items: center;
   border: 1px solid $black;
@@ -5,4 +9,9 @@
   display: flex;
   height: 150px;
   justify-content: center;
+}
+
+.game-title {
+  margin: 100px auto auto;
+  text-align: center;
 }

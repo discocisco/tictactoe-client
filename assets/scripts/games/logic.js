@@ -32,6 +32,12 @@ const checkWinner = () => {
     store.game.over = true
     api.gameOver(store.game.id)
     return true
+  } else if (!(store.game.cells.includes(''))) {
+    console.log('game is a tie')
+    $('#player-turn').append('<h3>Game is a Tie!</h3>')
+    store.game.over = true
+    api.gameOver(store.game.id)
+    return true
   } else {
     return false
   }

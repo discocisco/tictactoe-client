@@ -7,6 +7,10 @@ const gameEvents = require('./games/events.js')
 // use require without a reference to ensure a file is bundled
 // require('./example')
 
+$('#changepw-link').hide()
+$('#sign-out').hide()
+$('#game-board').hide()
+
 $(() => {
   // your JS code goes here
   $('#sign-up').on('submit', userEvents.onSignUp)

@@ -7,6 +7,10 @@ const onSignUpSuccess = (responseData) => {
 }
 
 const onSignInSuccess = (responseData) => {
+  $('#signup-link').hide()
+  $('#signin-link').hide()
+  $('#changepw-link').show()
+  $('#sign-out').show()
   store.user = responseData.user
   $('#user-message').html(`Successfully logged in as: ${store.user.email}`)
 }
@@ -16,7 +20,15 @@ const onChangePasswordSuccess = () => {
 }
 
 const onSignOutSuccess = () => {
+  $('#sign-out').hide()
+  $('#changepw-link').hide()
+  $('#game-board').hide()
+  $('#player-turn').hide()
+  $('#signup-link').show()
+  $('#signin-link').show()
   $('#user-message').html(`Successfully signed out of: ${store.user.email}`)
+  $('#game-board .row .btn').html('')
+  $('#game-board .row .btn').attr('disabled', true)
 }
 
 const onError = () => {

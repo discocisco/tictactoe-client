@@ -4,7 +4,6 @@ const config = require('../config.js')
 const store = require('../store.js')
 
 const createGame = () => {
-  $('#player-turn').html('<h3>Player X\'s turn</h3>')
   return $.ajax({
     url: config.apiUrl + '/games',
     method: 'POST',
