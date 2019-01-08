@@ -14,11 +14,16 @@
     <body>
       <!--Navigation bar-->
       <nav class="nav nav-pills flex-column flex-sm-row">
-        <a id="home-link" class="flex-sm-fill text-sm-center nav-link active" href="#">Home</a>
-        <a id="signin-link" class="flex-sm-fill text-sm-center nav-link" data-toggle="modal" data-target="#signInModalCenter" href="#">Sign In</a>
-        <a id="changepw-link" class="flex-sm-fill text-sm-center nav-link" data-toggle="modal" data-target="#changePWModalCenter" href="#">Change Password</a>
-        <a id="signup-link" class="flex-sm-fill text-sm-center nav-link" data-toggle="modal" data-target="#signUpModalCenter" href="#">Sign Up</a>
-        <a id="sign-out" class="flex-sm-fill text-sm-center nav-link" href="#">Sign Out</a>
+        <!-- <a id="home-link" class="flex-sm-fill text-sm-center nav-link active" href="#">Home</a> -->
+        <button type="button" id="home-link" class="btn btn-primary flex-sm-fill text-sm-center nav-link">Home</button>
+        <!-- <a id="signin-link" class="flex-sm-fill text-sm-center nav-link" data-toggle="modal" data-target="#signInModalCenter" href="#">Sign In</a> -->
+        <button type="button" id="signin-link" class="btn btn-info flex-sm-fill text-sm-center nav-link" data-toggle="modal" data-target="#signInModalCenter">Sign In</button>
+        <!-- <a id="changepw-link" class="flex-sm-fill text-sm-center nav-link" data-toggle="modal" data-target="#changePWModalCenter" href="#">Change Password</a> -->
+        <button type="button" id="changepw-link" class="btn btn-secondary flex-sm-fill text-sm-center nav-link" data-toggle="modal" data-target="#changePWModalCenter">Change Password</button>
+        <!-- <a id="signup-link" class="flex-sm-fill text-sm-center nav-link" data-toggle="modal" data-target="#signUpModalCenter" href="#">Sign Up</a> -->
+        <button type="button" id="signup-link" class="btn btn-success flex-sm-fill text-sm-center nav-link" data-toggle="modal" data-target="#signUpModalCenter">Sign Up</button>
+        <!-- <a id="sign-out" class="flex-sm-fill text-sm-center nav-link" href="#">Sign Out</a> -->
+        <button type="button" id="sign-out" class="btn btn-danger flex-sm-fill text-sm-center nav-link">Sign Out</button>
       </nav>
       <!--Content location-->
       <div class="row justify-content-center align-items-center">
@@ -32,10 +37,10 @@
         </div>
       </div>
 
-      <section class="container" id="user-log">
+      <section id="user-log" class="container">
         <div id="user-message"></div>
         <div id="player-turn"></div>
-        <div id="show-game"></div>
+        <div id="show-game" class="row"></div>
       </section>
 
 
@@ -43,21 +48,21 @@
         <!--Gameboard-->
         <div id="game-board" class="container">
           <div class="row">
-            <button id="box-0" type="button" class="btn btn-primary col-4 col-md-4 col-lg-4 box" disabled></button>
-            <button id="box-1" type="button" class="btn btn-primary col-4 col-md-4 col-lg-4 box" disabled></button>
-            <button id="box-2" type="button" class="btn btn-primary col-4 col-md-4 col-lg-4 box" disabled></button>
+            <button id="box-0" type="button" class="leftboard topboard btn btn-primary col-4 col-md-4 col-lg-4 box" disabled></button>
+            <button id="box-1" type="button" class="middleboard topboard btn btn-primary col-4 col-md-4 col-lg-4 box" disabled></button>
+            <button id="box-2" type="button" class="rightboard topboard btn btn-primary col-4 col-md-4 col-lg-4 box" disabled></button>
           </div>
 
           <div class="row">
-            <button id="box-3" type="button" class="btn btn-primary col-4 col-md-4 col-lg-4 box" disabled></button>
-            <button id="box-4" type="button" class="btn btn-primary col-4 col-md-4 col-lg-4 box" disabled></button>
-            <button id="box-5" type="button" class="btn btn-primary col-4 col-md-4 col-lg-4 box" disabled></button>
+            <button id="box-3" type="button" class="leftboard centerboard btn btn-primary col-4 col-md-4 col-lg-4 box" disabled></button>
+            <button id="box-4" type="button" class="middleboard centerboard btn btn-primary col-4 col-md-4 col-lg-4 box" disabled></button>
+            <button id="box-5" type="button" class="rightboard centerboard btn btn-primary col-4 col-md-4 col-lg-4 box" disabled></button>
           </div>
 
           <div class="row">
-            <button id="box-6" type="button" class="btn btn-primary col-4 col-md-4 col-lg-4 box" disabled></button>
-            <button id="box-7" type="button" class="btn btn-primary col-4 col-md-4 col-lg-4 box" disabled></button>
-            <button id="box-8" type="button" class="btn btn-primary col-4 col-md-4 col-lg-4 box" disabled></button>
+            <button id="box-6" type="button" class="leftboard bottomboard btn btn-primary col-4 col-md-4 col-lg-4 box" disabled></button>
+            <button id="box-7" type="button" class="middleboard bottomboard btn btn-primary col-4 col-md-4 col-lg-4 box" disabled></button>
+            <button id="box-8" type="button" class="rightboard bottomboard btn btn-primary col-4 col-md-4 col-lg-4 box" disabled></button>
           </div>
         </div>
       </section>

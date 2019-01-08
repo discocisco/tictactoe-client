@@ -7,11 +7,48 @@
   border: 1px solid $black;
   color: $font-color;
   display: flex;
-  height: 150px;
+  height: 200px;
   justify-content: center;
 }
 
 .game-title {
   align-items: center;
   text-align: center;
+}
+
+.middleboard {
+  border-left: 5px solid $opaque-black;
+  border-right: 5px solid $opaque-black;
+
+  &:disabled {
+    border-left: 5px solid $opaque-black;
+    border-right: 5px solid $opaque-black;
+  }
+}
+
+.centerboard {
+  border-bottom: 5px solid $opaque-black;
+  border-top: 5px solid $opaque-black;
+
+  &:disabled {
+    border-bottom: 5px solid $opaque-black;
+    border-top: 5px solid $opaque-black;
+  }
+}
+
+#game-board .row .btn {
+  // background-color: $nobel;
+  font-size: 70px;
+}
+
+@media (max-width: 1200px) {
+  .box {
+    height: 150px;
+  }
+}
+
+@media (max-width: 576px) {
+  .box {
+    height: 120px;
+  }
 }

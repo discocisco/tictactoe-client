@@ -16,10 +16,13 @@ const onCreateGameSuccess = (responseData) => {
 const onIndexGamesSuccess = (responseData) => {
   $('#game-board').hide()
   store.games = responseData.games
+  $('#user-message').html(`<h3>Total games created: ${store.games.length}</h3>`)
   store.games.forEach(game => {
     const gameHTML = (`
-      <p>Game ID: <button type="submit" id="game-${game.id}" class="get-game btn btn-primary">${game.id}</button></p>
-      <p>Finished?: ${game.over}</p>
+      <div class="games-list col-4 col-md-3 col-lg-3">
+        <h4>Game ID: <button type="submit" id="game-${game.id}" class="get-game btn btn-primary">${game.id}</button></h4>
+        <p>Finished?: ${game.over}</p>
+      </div>
     `)
     $('#show-game').append(gameHTML)
   })
