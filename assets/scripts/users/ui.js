@@ -13,6 +13,7 @@ const onSignInSuccess = (responseData) => {
   $('#sign-out').show()
   store.user = responseData.user
   $('#user-message').html(`Successfully logged in as: ${store.user.email}`)
+  $('#gameStart').removeAttr('disabled')
 }
 
 const onChangePasswordSuccess = () => {
@@ -30,6 +31,7 @@ const onSignOutSuccess = () => {
   $('#user-message').html(`Successfully signed out of: ${store.user.email}`)
   $('#game-board .row .btn').html('')
   $('#game-board .row .btn').attr('disabled', true)
+  $('#gameStart').attr('disabled', true)
 }
 
 const onError = () => {

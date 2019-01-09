@@ -14,6 +14,7 @@ const onCreateGameSuccess = (responseData) => {
 
 const onIndexGamesSuccess = (responseData) => {
   $('#game-board').hide()
+  $('#player-turn').html('')
   store.games = responseData.games
   $('#user-message').html(`<h3>Total games created: ${store.games.length}</h3>`)
   store.games.forEach(game => {
