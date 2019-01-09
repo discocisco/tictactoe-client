@@ -31,7 +31,7 @@ const checkWinner = () => {
     api.gameOver(store.game.id)
     return true
   } else if (!(store.game.cells.includes(''))) {
-    $('#player-turn').hmtl('<h3>Game is a Tie!</h3>')
+    $('#player-turn').html('<h3>Game is a Tie!</h3>')
     store.game.over = true
     api.gameOver(store.game.id)
     return true
