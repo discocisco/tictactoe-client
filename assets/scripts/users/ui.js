@@ -37,7 +37,6 @@ const onSignOutSuccess = () => {
 }
 
 const onError = () => {
-  $('#user-message').css('color', 'red')
   $('#user-message').html('Encountered error, please try again :(')
 }
 
