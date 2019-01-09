@@ -22,4 +22,7 @@ $(() => {
   $('#create-game').on('click', gameEvents.onCreateGame)
   $('#show-game').on('click', gameEvents.onShowGame)
   $('#game-board').on('click', gameEvents.onUpdateGame)
+  $('.modal').on('hidden.bs.modal', function () {
+    $(this).find('form').trigger('reset')
+  })
 })
