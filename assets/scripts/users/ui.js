@@ -9,6 +9,7 @@ const onSignUpSuccess = (responseData) => {
 const onSignInSuccess = (responseData) => {
   $('#signup-link').hide()
   $('#signin-link').hide()
+  $('#player-turn').show()
   $('#changepw-link').show()
   $('#sign-out').show()
   store.user = responseData.user
