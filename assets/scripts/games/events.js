@@ -14,7 +14,6 @@ const onCreateGame = event => {
 
 const onIndexGames = event => {
   event.preventDefault()
-  console.log('event.target is', event.target)
   api.indexGames()
     .then(ui.onIndexGamesSuccess)
     .catch(ui.onGameError)
@@ -25,7 +24,6 @@ const onIndexGames = event => {
 const onShowGame = event => {
   event.preventDefault()
   const gameID = event.target.textContent
-  console.log('gameID', gameID)
   api.showGame(gameID)
     .then(ui.onShowGameSuccess)
     .catch(ui.onGameError)
