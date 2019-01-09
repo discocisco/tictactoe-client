@@ -20,7 +20,7 @@ const onIndexGamesSuccess = (responseData) => {
   store.games.forEach(game => {
     const gameHTML = (`
       <div class="games-list col-4 col-md-3 col-lg-3">
-        <h4>Game ID: <button type="submit" id="game-${game.id}" class="get-game btn btn-primary">${game.id}</button></h4>
+        <h4>Game ID: <button type="button" id="game-${game.id}" class="get-game btn btn-primary">${game.id}</button></h4>
         <p>Finished?: ${game.over}</p>
       </div>
     `)
@@ -41,6 +41,10 @@ const onShowGameSuccess = (responseData) => {
     }
   }
   gameLogic.checkWinner()
+}
+
+const onShowGameError = (responseData) => {
+  $('#user-message').html('<h3>Select the game you want to view!</h3>')
 }
 
 const onUpdateGameSuccess = (responseData) => {
@@ -69,6 +73,7 @@ module.exports = {
   onCreateGameSuccess,
   onIndexGamesSuccess,
   onShowGameSuccess,
+  onShowGameError,
   onUpdateGameSuccess,
   onGameError,
   onPageResetSuccess

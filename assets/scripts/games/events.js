@@ -26,7 +26,7 @@ const onShowGame = event => {
   const gameID = event.target.textContent
   api.showGame(gameID)
     .then(ui.onShowGameSuccess)
-    .catch(ui.onGameError)
+    .catch(ui.onShowGameError)
 }
 
 const onUpdateGame = event => {
