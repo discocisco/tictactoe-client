@@ -41,8 +41,8 @@
 
   ### Wireframes and user stories
 
-  [] [Wireframes located here](https://imgur.com/a/Bt0sZWc)
-  [] User stories:
+  1. [ ] [Wireframes located here.](https://imgur.com/a/Bt0sZWc)
+  1. [ ] User stories:
   - As a player, I want to create a profile so that the game remembers me.
   - As a user, I want to be able to play the game.
   - As a user, I want to play a game so that the game remembers my result.
