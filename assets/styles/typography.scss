@@ -1,3 +1,12 @@
+@font-face {
+  font-family: 'Pixel-Noir';
+  src: url('public/pixel_noir/Pixel-Noir.ttf') format('truetype');
+}
+
+body {
+  background-color: $nobel;
+}
+
 .nav {
   border-bottom: 1px solid $black;
 }
@@ -9,10 +18,21 @@
   display: flex;
   height: 200px;
   justify-content: center;
+  text-transform: uppercase;
 }
 
 .game-title {
   align-items: center;
+  text-align: center;
+}
+
+.game-name {
+  color: $white;
+}
+
+#user-log {
+  color: $white;
+  font-family: 'Pixel-Noir', sans-serif;
   text-align: center;
 }
 
