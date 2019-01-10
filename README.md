@@ -1,120 +1,51 @@
-## Tic Tac Toe game!
+  [![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
 
-This is where we can start to place things that talk about the game or other
-fun things! Maybe I'll describe how to use the website itself and then I'll
-get into things like how-to-play tic-tac-toe or other fun things.
+  # Tic Tac Toe web game
 
-Woo!
-  <!-- [![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
+  Tic Tac Toe is a game played by two players. Each player takes a turn marking a space in a 3x3 grid until a single player succeeds in placing three of their own marks in a horizontal, vertical, or diagonal row resulting in a win.
 
-  # browser-template
+  [Play the game here!](https://discocisco.github.io/tictactoe-client)
 
-  A template for starting front-end projects. Webpack for `require` system, build
-  pipeline, and development server. Boostrap and Handlebars.js included. No
-  front-end frameworks included.
+  ## Technologies used
 
-  ## Installation
+  - Hypertext Markup Language (HTML)
+  - Cascading Style Sheets (CSS)
+  - Sass (SCSS)
+  - JavaScript
+  - Ajax language
+  - jQuery
+  - Bootstrap
+  - Git
+  - cURL
+  - API's created and provided by GA Instructors
 
-  1. [Download](../../archive/master.zip) this template.
-  1. Move to the `wdi/projects` directory, then unzip the template directory with
-      `unzip /Users/<user-name>/Downloads/browser-template-master.zip`.
-  1. Rename the template directory from `browser-template-master` to
-      `<project-name>-client`.
-  1. Empty [`README.md`](README.md) and fill with your own content.
-  1. Replace all instances of `tictactoe-client` with the name of
-      your project.
-  1. Move into the new project and `git init`.
-  1. Add all of the files in your project with the command `git add --all`.
-        - **Note: This is the only time you should run this command!**
-  1. Commit all of your files with the command `git commit`.
-        - Your commit title should read `Initial commit`.
-  1. Install dependencies with `npm install`.
-  1. Create a new repository on [github.com](https://github.com),
-      _not GitHub Enterprise_.
-  1. Name the new repository with the same name used on Step 3.
-  1. Follow the instructions on your new repository's setup page. For details on
-     how to push to Github, refer to the section on Github entitled "…or push an existing
-     repository from the command line." Further documentation can be found [here](https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/).
+  ## Development process and strategy
 
-  ## Structure
+  The focus of this project was to handle one specific feature then write out the corresponding technologies or languages used for that feature. If no glaring issues were present, the strategic flow went something like:
+  - Test feature through `cURL` scripts
+  - Create necessary forms, buttons, or sections in `index.html` for feature location
+  - Write `jQuery` calls that initialize handling of target events
+  - Organize and structure the events necessary for the feature
+  - Send API calls as necessary to reflect user events in the API given by GA in the back end
+  - Display events or text for user interaction on the front end
 
-  Developers should store JavaScript files in [`assets/scripts`](assets/scripts).
-  The "manifest" or entry-point is
-  [`assets/scripts/app.js`](assets/scripts/app.js). In general, only
-  application initialization goes in this file. It's normal for developers to
-  start putting all code in this file, but encourage them to break out different
-  responsibilities and use the `require` syntax put references where they're
-  needed.
+  If the intended feature encountered a bug in any of the steps listed above, workarounds were made starting in the area where the error occured and moving in reverse of the list above until a fix could be applied.
 
-  Developers should set `apiUrls.production` and `apiUrls.development` in
-  [`assets/scripts/config.js`](assets/scripts/config.js).  With
-  `apiUrls` set, developers may rely on `apiUrl` as the base for API
-  URLs.
+  After adequate results were obtained, style elements were adjusted to help aid in user interaction. Bootstrap was used as the main techology during this process with light use of Sass where appropriate.
 
-  Developers should store styles in [`assets/styles`](assets/styles) and load them
-  from [`assets/styles/index.scss`](assets/styles/index.scss). Bootstrap version 3 is
-  included in this template.
+  ## The future is closer than you think
 
-  Developers should use [getFormFields](get-form-fields.md) to retrieve form data
-  to send to an API.
+  - Player 2 is supported using this API supplied from GA, however, the current state in this project does not support a player 2 to sign-in.
+  - Multiplayer functionality that enables two players to play the same game using two separate devices is not yet supported.
+  - In the console a bug is found after displaying all the games played by a single user. If the user should click the area surrounding a button, **but not the button itself**, after attempting to load a previous game, this project will attempt an API call with no information supplied. This is not reflected during the user interaction nor does it prevent the game from functioning properly.
 
-  To deploy a browser-template based SPA, run `grunt deploy`.
+  ### Wireframes and user stories
 
-  ## Adding Images
-
-  To add images to your project, you must store them in the `public` directory.
-  To use the image in HTML or CSS, write the path to the image like this:
-
-  ```html
-  <img src="public/cat.jpg">
-  ```
-  or
-  ```css
-  #my-cool-div {
-    background-image: url('public/cat.jpg')
-  }
-  ```
-
-  Note that there's no `./` or `/` in front of `public/filename.jpg`.
-
-  ## Adding Fonts
-
-  To add custom fonts to your app, you can either use a CDN like Google Fonts, or
-  you can download the fonts and save them in the `public` directory. If you use
-  the former method, follow the directions on the website providing the fonts.
-
-  For local fonts, put the files in `public`, and then import and use them in a
-  `.scss` file like this:
-
-  ```scss
-  @font-face {
-    font-family: 'Nature Beauty';
-    src: url('public/Nature-Beauty.ttf') format('truetype');
-  }
-
-  .element-with-custom-font {
-    font-family: 'Nature Beauty';
-  }
-  ```
-
-  ## Tasks
-
-  Developers should run these often!
-
-  - `grunt nag` or just `grunt`: runs code quality analysis tools on your code
-      and complains
-  - `grunt make-standard`: reformats all your code in the JavaScript Standard Style
-  - `grunt <server|serve|s>`: generates bundles, watches, and livereloads
-  - `grunt build`: place bundled styles and scripts where `index.html` can find
-      them
-
-  ## Additional Resources
-
-  - [Modern Javascript Explained for Dinosaurs](https://medium.com/@peterxjang/modern-javascript-explained-for-dinosaurs-f695e9747b70)
-  - [Making Sense of Front End Build Tools](https://medium.freecodecamp.org/making-sense-of-front-end-build-tools-3a1b3a87043b)
-
-  ## [License](LICENSE)
-
-  1. All content is licensed under a CC­BY­NC­SA 4.0 license.
-  1. All software code is licensed under GNU GPLv3. For commercial use or
-      alternative licensing, please contact legal@ga.co. -->
+  [] [Wireframes located here](https://imgur.com/a/Bt0sZWc)
+  [] User stories:
+  - As a player, I want to create a profile so that the game remembers me.
+  - As a user, I want to be able to play the game.
+  - As a user, I want to play a game so that the game remembers my result.
+  - As a user, I want to be able to change my password because YIKES.
+  - As a user, I want to be able to access specific games.
+  - As a user, I want to be able to sign out for security.
