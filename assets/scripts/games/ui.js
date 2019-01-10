@@ -5,6 +5,7 @@ const gameLogic = require('./logic.js')
 
 const onCreateGameSuccess = (responseData) => {
   $('#player-turn').html('<h3>Player X\'s turn</h3>')
+  $('#show-game').html('')
   $('#game-board').show()
   store.game = responseData.game
   $('#game-board .row .btn').html('')
