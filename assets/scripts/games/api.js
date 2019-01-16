@@ -49,8 +49,7 @@ const updateGame = (id) => {
           'cell': {
             'index': id,
             'value': 'x'
-          },
-          'over': false
+          }
         }
       }
     })
@@ -67,8 +66,7 @@ const updateGame = (id) => {
           'cell': {
             'index': id,
             'value': 'o'
-          },
-          'over': false
+          }
         }
       }
     })

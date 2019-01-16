@@ -3,6 +3,11 @@
   src: url('public/pixel_noir/Pixel-Noir.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: '3Dumb';
+  src: url('public/3dumb/3Dumb.ttf') format('truetype');
+}
+
 body {
   background-color: $nobel;
 }
@@ -32,7 +37,6 @@ body {
 
 #user-log {
   color: $white;
-  // font-family: 'Pixel-Noir', sans-serif;
   text-align: center;
 }
 
@@ -64,6 +68,11 @@ body {
 #game-board .row .btn {
   // background-color: $nobel;
   font-size: 70px;
+}
+
+.game-title h1 {
+  font-family: '3Dumb';
+  font-size: 10vmin;
 }
 
 @media (max-width: 1200px) {
