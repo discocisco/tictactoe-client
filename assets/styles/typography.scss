@@ -8,8 +8,27 @@
   src: url('public/3dumb/3Dumb.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'Bungee-Shade';
+  src: url('public/Bungee_Shade/BungeeShade-Regular.ttf') format('truetype');
+}
+
 body {
   background-color: $nobel;
+}
+
+.navbar-brand {
+  font-family: 'Bungee-Shade';
+}
+
+#user-message {
+  color: $font-color;
+  font-family: 'Bungee-Shade';
+  font-size: 3vmin;
+}
+
+#player-turn {
+  font-family: 'Bungee-Shade';
 }
 
 .nav {
@@ -21,7 +40,7 @@ body {
   border: 1px solid $black;
   color: $font-color;
   display: flex;
-  height: 200px;
+  height: 20vmin;
   justify-content: center;
   text-transform: uppercase;
 }
@@ -67,16 +86,17 @@ body {
 
 #game-board .row .btn {
   // background-color: $nobel;
-  font-size: 70px;
+  font-family: '3Dumb';
+  font-size: 12vmin;
 }
 
 .game-title h1 {
-  font-family: '3Dumb';
+  font-family: 'Bungee-Shade';
   font-size: 10vmin;
 }
 
 .game-title h4 {
-  font-family: '2Dumb';
+  font-family: '3Dumb';
   font-size: 4vmin;
 }
 
