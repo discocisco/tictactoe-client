@@ -9,6 +9,8 @@ const onSignUpSuccess = (responseData) => {
 const onSignInSuccess = (responseData) => {
   $('#signup-link').hide()
   $('#signin-link').hide()
+  $('.signin-msg').hide()
+  $('#gameStart').show()
   $('#player-turn').html('')
   $('#player-turn').show()
   $('#changepw-link').show()
@@ -27,6 +29,9 @@ const onSignOutSuccess = () => {
   $('#changepw-link').hide()
   $('#game-board').hide()
   $('#player-turn').hide()
+  $('#gameStart').hide()
+  $('#show-game').hide()
+  $('.signin-msg').show()
   $('.game-name').show()
   $('#signup-link').show()
   $('#signin-link').show()

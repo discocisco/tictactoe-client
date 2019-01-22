@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'Pixel-Noir';
-  src: url('public/pixel_noir/Pixel-Noir.ttf') format('truetype');
+  font-family: '2Dumb';
+  src: url('public/3dumb/2Dumb.ttf') format('truetype');
 }
 
 @font-face {
@@ -73,6 +73,11 @@ body {
 .game-title h1 {
   font-family: '3Dumb';
   font-size: 10vmin;
+}
+
+.game-title h4 {
+  font-family: '2Dumb';
+  font-size: 4vmin;
 }
 
 @media (max-width: 1200px) {

@@ -16,6 +16,7 @@ const onCreateGameSuccess = (responseData) => {
 const onIndexGamesSuccess = (responseData) => {
   $('#game-board').hide()
   $('#player-turn').html('')
+  $('#show-game').html('')
   store.games = responseData.games
   $('#user-message').html(`<h3>Total games created: ${store.games.length}</h3>`)
   store.games.forEach(game => {
@@ -34,11 +35,13 @@ const onShowGameSuccess = (responseData) => {
   $('#show-game').html('')
   $('#user-message').html(`Successfully loaded previous game! Game ID is ${store.game.id}`)
   $('#game-board').show()
-  $('#game-board .row .btn').removeAttr('disabled')
+  $('#game-board .row .btn').html('')
   for (let i = 0; i < store.game.cells.length; i++) {
     if (store.game.cells[i]) {
       $('#box-' + i).attr('disabled', true)
       $('#box-' + i).html(store.game.cells[i])
+    } else {
+      $('#box-' + i).removeAttr('disabled')
     }
   }
   gameLogic.checkWinner()

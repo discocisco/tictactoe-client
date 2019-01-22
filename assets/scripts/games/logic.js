@@ -32,6 +32,7 @@ const checkWinner = () => {
     return true
   } else if (!(store.game.cells.includes(''))) {
     $('#player-turn').html('<h3>Game is a Tie!</h3>')
+    $('#game-board .row .btn').attr('disabled', true)
     store.game.over = true
     api.gameOver(store.game.id)
     return true
